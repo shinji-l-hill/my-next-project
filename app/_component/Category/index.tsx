@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './index.module.css'
-import { Category } from '@/app/_libs/microcms';
+import { Category as CategoryType } from '@/app/_libs/microcms';
 
 type Props = {
-  category: Category;
+  category: CategoryType;
 }
 
 const Category = ({category}: Props) => {
