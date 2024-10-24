@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './index.module.css';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -7,13 +8,13 @@ const Footer = () => {
       <nav className={styles.nav}>
         <ul className={styles.items}>
           <li className={styles.item}>
-            <a href="/news">ニュース</a>
+            <Link href="/news">ニュース</Link>
           </li>
           <li className={styles.item}>
-            <a href="/member">メンバー</a>
+            <Link href="/member">メンバー</Link>
           </li>
           <li className={styles.item}>
-            <a href="/contact">お問い合わせ</a>
+            <Link href="/contact">お問い合わせ</Link>
           </li>
         </ul>
       </nav>

@@ -4,6 +4,7 @@ import React from 'react'
 import { News } from '@/app/_libs/microcms';
 import Category from '../Category';
 import Date from '../Date';
+import Link from 'next/link';
 
 type Props = {
   news: News[]
@@ -17,7 +18,7 @@ const NewsList = ({ news }: Props) => {
     <ul>
       {news.map((article) => (
         <li key={article.id} className={styles.list}>
-          <div className={styles.link}>
+          <Link href={`news/${article.id}`} className={styles.link}>
             <Image
               className={styles.image}
               src="/no-image.png"
@@ -32,7 +33,7 @@ const NewsList = ({ news }: Props) => {
                 <Date date={article.pablishedAt ?? article.createdAt} />
               </dd>
             </dl>
-          </div>
+          </Link>
         </li>
       ))}
     </ul>

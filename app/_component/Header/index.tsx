@@ -1,11 +1,13 @@
 import React from 'react'
 import styles from './index.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
+import Menu from '../Menu';
 
 const Header = () => {
   return (
     <header className={styles.header}>
-      <a href="/" className={styles.logoLink}>
+      <Link href="/" className={styles.logoLink}>
         <Image
           src="/logo.svg"
           alt="SIMPLE"
@@ -14,7 +16,8 @@ const Header = () => {
           height={133}
           priority
         />
-      </a>
+      </Link>
+      <Menu />
     </header>
   )
 }
