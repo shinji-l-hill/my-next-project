@@ -1,12 +1,14 @@
 import React from 'react'
 import styles from './index.module.css'
 import Image from 'next/image';
+import { formatDate } from '@/app/_libs/utils';
 
 type Props = {
   date: string;
 }
 
 const Date = ({date}: Props) => {
+  const formatedDate = formatDate(date);
   return (
     <span className={styles.date}>
     <Image
@@ -16,7 +18,7 @@ const Date = ({date}: Props) => {
       height={16}
       priority
     />
-    {date}
+    {formatedDate}
   </span>
   )
 }
