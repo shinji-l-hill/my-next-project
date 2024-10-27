@@ -69,7 +69,12 @@ export const getContentDetail = async <T>(
   const detailData = await client.getListDetail<T>({
     endpoint,
     contentId,
-    queries
+    queries,
+    customRequestInit: {
+      next: {
+        revalidate: queries?.draftKey === undefined ? 60 : 0,
+      }
+    }
   });
 
   return detailData;
