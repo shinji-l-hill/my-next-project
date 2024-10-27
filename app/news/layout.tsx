@@ -6,6 +6,8 @@ type Props = {
   children: React.ReactNode
 }
 
+export const revalidate = 60;
+
 const RootLayout = ({children}: Props) => {
   return (
     <>
