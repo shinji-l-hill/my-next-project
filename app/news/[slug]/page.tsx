@@ -14,6 +14,8 @@ type Props = {
   }
 }
 
+export const revalidate = 0;
+
 const NewsDetail = async ({params, searchParams}: Props) => {
   const newsDetail = await getContentDetail<News>('news', params.slug, {
     draftKey: searchParams.dk

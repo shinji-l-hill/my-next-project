@@ -5,6 +5,8 @@ import Hero from "./_component/Hero";
 import { getContents, News } from "./_libs/microcms";
 import { TOP_NEWS_LIMIT } from "./_constants";
 
+export const revalidate = 0;
+
 
 export default async function Home() {
   const data = await getContents<News>("news", {limit: TOP_NEWS_LIMIT});
